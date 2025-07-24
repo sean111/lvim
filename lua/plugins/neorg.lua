@@ -1,29 +1,9 @@
 return {
-  "nvim-neorg/neorg",
-  build = ":Neorg sync-parsers",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  config = function()
-    require("neorg").setup({
-      load = {
-        ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.export"] = {},
-        ["core.presenter"] = {},
-        ["core.tempus"] = {},
-        ["core.ui.calendar"] = {},
-        ["core.completion"] = {},
-        ["core.summary"] = {},
-        ["core.dirman"] = { -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              notes = "~/Documents/notes/norg/work",
-            },
-          },
-        },
-      },
-    })
-  end,
-  keys = {
-    { "<leader>nj", "<cmd>Neorg journal<cr>", desc = "Neorg Journal" },
-  },
+  -- "nvim-neorg/neorg",
+  -- lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+  -- version = "*", -- Pin Neorg to the latest stable release
+  -- config = true,
+  -- keys = {
+  --   { "<leader>nj", "<cmd>Neorg journal<cr>", desc = "Neorg Journal" },
+  -- },
 }

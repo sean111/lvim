@@ -24,6 +24,12 @@ return {
       },
     },
 
+    templates = {
+      folder = "templates",
+      date_format = "%Y-%m-%d",
+      time_format = "%H%M",
+    },
+
     -- see below for full list of options 👇
     notes_subdir = "notes",
     daily_notes = {
@@ -39,7 +45,7 @@ return {
 
     completion = {
       -- Set to false to disable completion.
-      nvim_cmp = true,
+      nvim_cmp = false,
 
       -- Trigger completion at 2 chars.
       min_chars = 2,

@@ -191,7 +191,17 @@ return {
     event = "VeryLazy",
     opts = function()
       return {
-        --[[add your custom lualine config here]]
+        {
+          sections = {
+            lualine_x = {
+              {
+                "rest",
+                icon = "",
+                fg = "#428890",
+              },
+            },
+          },
+        },
       }
     end,
   },
@@ -211,6 +221,10 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+      },
+      registries = {
+        "github:mason-org/mason-registry",
+        "github:mkindberg/ghostty-ls",
       },
     },
   },
